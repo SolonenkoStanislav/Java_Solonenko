@@ -117,16 +117,20 @@ public class Main {
             System.exit(0);
         }
         System.out.println();
-        System.out.println("Середнє арифметичне команди " + teamOne + " = " + (playerOne + playerTwo + playerThree + playerFour + playerFive / 5));
-        System.out.println("Середнє арифметичне команди " + teamTwo + " = " + (playerSix + playerSeven + playerEight + playerNine + playerTen / 5));
+        double resultTeamOne = ((playerOne + playerTwo + playerThree + playerFour + playerFive) / 5);
+        System.out.println("Середнє арифметичне команди " + teamOne + " = " + resultTeamOne);
+        System.out.println();
+        double resultTeamTwo = ((playerSix + playerSeven + playerEight + playerNine + playerTen) / 5);
+        System.out.println("Середнє арифметичне команди " + teamTwo + " = " + resultTeamTwo);
+        System.out.println();
 
-
-        if (teamOne > teamTwo) {
-            System.out.println("Команда " + teamOne + "виграла");
-        } else if (teamOne < teamTwo) {
-            System.out.println("Команда " + teamTwo + "виграла");
+        if (resultTeamOne > resultTeamTwo) {
+            System.out.println("Команда " + teamOne + " виграла");
+        } else if (resultTeamOne < resultTeamTwo) {
+            System.out.println("Команда " + teamTwo + " виграла");
         } else {
             System.out.println("Нічия!");
         }
+
+        }
     }
-}
