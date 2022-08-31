@@ -125,9 +125,9 @@ public class Main {
         System.out.println();
 
         if (resultTeamOne > resultTeamTwo) {
-            System.out.println("Команда " + teamOne + " виграла");
+            System.out.println("Перемогла команда " + teamOne + " яка набрала" + resultTeamOne + " очків");
         } else if (resultTeamOne < resultTeamTwo) {
-            System.out.println("Команда " + teamTwo + " виграла");
+            System.out.println("Перемогла команда " + teamTwo + " яка набрала" + resultTeamTwo + " очків");
         } else {
             System.out.println("Нічия!");
         }
