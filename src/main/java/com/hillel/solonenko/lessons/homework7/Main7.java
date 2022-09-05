@@ -6,24 +6,39 @@ import java.util.Scanner;
 public class Main7 {
     public static void main(String[] args) {
 
-        double firstGuessNumb = (Math.random() * 10);
+        double firstGuessNumb = (int)(Math.random() * 10);
         System.out.println((int) firstGuessNumb);
 
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0;; i++) {
-            int firstValue = 0;
-            if (scanner.hasNextInt()) {
+        System.out.println("Enter number from 1 to 10 to try to guess the number PC set");
+        int firstValue = 0;
+        int i = 3;
+        for (;i >= 0; i--) {
+            if (scanner.hasNextInt()){
                 firstValue = scanner.nextInt();
-                System.out.println("You entered : " + firstValue);
+                System.out.println("Your number is : " + firstValue);
+                if (firstValue == firstGuessNumb) {
+                    System.out.println("That's right! You won!");
+                    break;
+                } else {
+                    System.out.println("Wrong,attempts left = " + i);
+                }
+            }else {
+                System.out.println("Wrong value,try again!");
+                i = 0;
+                scanner.nextLine();
             }
             if (firstValue > 10 || firstValue < 0) {
-                System.out.println("Wrong number, try again!");
-                scanner.nextLine();
-            } else {
-                System.out.println("Wrong number, try again!");
+                System.out.println("Wrong value,try again");
+                i = 0;
             }
+        }
+        if (i == 0 ||firstValue != firstGuessNumb){
+            System.out.println();
+            System.out.println("You lose, the set number was : " + (int)firstGuessNumb);
+        }
     }
-}}
+}
 
 
