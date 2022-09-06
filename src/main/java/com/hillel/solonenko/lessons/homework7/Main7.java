@@ -43,7 +43,6 @@ public class Main7 {
 
 
 
-
 //        System.out.println("Enter number from 1 to 10 to try to guess the number PC set");
 //        int firstValue = 0;
 //        int i = 3;
