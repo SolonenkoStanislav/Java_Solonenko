@@ -26,10 +26,11 @@ public class Main1 {
         int a = 0;
         for (int i = 0; i < firmValue.length; i++) {
             if (userValue[i] == firmValue[i]) {
-                a = +1;
+                a += 1;
+                System.out.println("Збіг на елементі : " + i);
             }
         }
-        System.out.println("Кількість збігів = " + a);
+        System.out.println("Кількість збігів = " + a );
 
     }
 }
