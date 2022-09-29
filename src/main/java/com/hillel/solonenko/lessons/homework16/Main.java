@@ -12,6 +12,6 @@ public class Main {
         iPhones.call();
         iPhones.internet();
         iPhones.sms();
-        iPhones.IOS();
+        iPhones.IOS1();
     }
 }

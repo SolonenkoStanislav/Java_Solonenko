@@ -18,7 +18,7 @@ public class IPhones implements Smartphones,IOS{
     }
 
     @Override
-    public void IOS() {
+    public void IOS1() {
         System.out.println("IOS Iphone");
     }
 }
