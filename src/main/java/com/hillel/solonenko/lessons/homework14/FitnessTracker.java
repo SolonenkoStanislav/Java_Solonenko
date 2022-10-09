@@ -1,122 +1,115 @@
 package com.hillel.solonenko.lessons.homework14;
 
-
-import java.io.FileReader;
-
 public class FitnessTracker {
+        private final String name;
+        private final int birthDay;
+        private final int birthMonth;
+        private final int birthYear;
+        private final String email;
+        private final String phoneNumber;
+        private String surname;
+        private double weight;
+        private int age;
+        private int pressure;
 
-    public static void main(String[] args) {
-    }
+        public FitnessTracker(String name, int birthDay, int birthMonth, int birthYear, String email, String phoneNumber, String surname, double weight) {
+            this.name = name;
+            this.birthDay = birthDay;
+            this.birthMonth = birthMonth;
+            this.birthYear = birthYear;
+            this.email = email;
+            this.phoneNumber = phoneNumber;
+            this.surname = surname;
 
-    String name;
-    String dateDay;
-    String dateMonth;
-    String dateYear;
-    String email;
-    String phone;
-    final String surname;
-    final String weight;
-    final String pressure;
-    final String steps;
-
-    public FitnessTracker(String name, String dateDay, String dateMonth, String dateYear, String email, String phone,
-                          String surname, String weight, String pressure, String steps) {
-        this.name = name;
-        this.dateDay = dateDay;
-        this.dateMonth = dateMonth;
-        this.dateYear = dateYear;
-        this.email = email;
-        this.phone = phone;
-        this.surname = surname;
-        this.weight = weight;
-        this.pressure = pressure;
-        this.steps = steps;
-    }
-
-    void printAccountInfo() {
-        System.out.println(this);
-    }
+            setWeight(weight);
+            age = 2020 - birthYear;
+        }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getBirthDay() {
+        return birthDay;
     }
 
-    public String getDateDay() {
-        return dateDay;
+    public int getBirthMonth() {
+        return birthMonth;
     }
 
-    public void setDateDay(String dateDay) {
-        this.dateDay = dateDay;
-    }
-
-    public String getDateMonth() {
-        return dateMonth;
-    }
-
-    public void setDateMonth(String dateMonth) {
-        this.dateMonth = dateMonth;
-    }
-
-    public String getDateYear() {
-        return dateYear;
-    }
-
-    public void setDateYear(String dateYear) {
-        this.dateYear = dateYear;
+    public int getBirthYear() {
+        return birthYear;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public String getWeight() {
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public double getWeight() {
         return weight;
     }
 
-    public String getPressure() {
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getPressure() {
         return pressure;
     }
 
-    public String getSteps() {
-        return steps;
+    public void setPressure(int pressure) {
+        this.pressure = pressure;
     }
 
-    @Override
-    public String toString() {
-        return
-                "name='" + name + '\'' +
-                ", dateDay='" + dateDay + '\'' +
-                ", dateMonth='" + dateMonth + '\'' +
-                ", dateYear='" + dateYear + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", surname='" + surname + '\'' +
-                ", weight='" + weight + '\'' +
-                ", pressure='" + pressure + '\'' +
-                ", steps='" + steps;
+    public void setWeight(double weight) {
+            if (weight < 0) {
+                System.out.println("Wrong data!");
+            } else {
+                this.weight = weight;
+            }
+        }
+
+        void printAccountInfo() {
+            String stringBuilder = "Person :" + "name='" + name + '\'' +
+                    ", birthDay =" + birthDay +
+                    ", birthMonth =" + birthMonth +
+                    ", birthYear =" + birthYear +
+                    ", age =" + age +
+                    ", email ='" + email + '\'' +
+                    ", phoneNumber ='" + phoneNumber +
+                    '\'' + ", surname ='" + surname +
+                    '\'' + ", weight =" + weight;
+
+            System.out.println(stringBuilder);
+
+        }
+
+        @Override
+        public String toString() {
+            return "Person :" +
+                    "name='" + name + '\'' +
+                    ", birthDay=" + birthDay +
+                    ", birthMonth=" + birthMonth +
+                    ", birthYear=" + birthYear +
+                    ", email='" + email + '\'' +
+                    ", phoneNumber='" + phoneNumber + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", weight=" + weight;
+        }
     }
-}
-
-
-
-
