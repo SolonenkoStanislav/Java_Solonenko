@@ -5,6 +5,7 @@ package com.hillel.solonenko.lessons.homework13;
 public class Burger {
     public static void main(String[] args) {
 
+
     }
 
     String bun;

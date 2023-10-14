@@ -87,9 +87,9 @@ public class homework11 {
         if (temp > temp1) {
             for (int i = 0; i < matrixValue.length; i++) {
                 for (int j = i + 1; j < matrixValue[i].length; j++) {
-                    int temp3 = matrixValue[i][j];
+                    int temp3 = matrixValue[j][i];
                     matrixValue[i][j] = matrixValue[j][i];
-                    matrixValue[j][i] = temp3;
+                    matrixValue[i][j] = temp3;
                 }
             }
         } else {

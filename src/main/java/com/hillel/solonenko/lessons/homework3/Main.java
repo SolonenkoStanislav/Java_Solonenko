@@ -1,11 +1,25 @@
 package com.hillel.solonenko.lessons.homework3;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        int a = 5;
-        int b = 6;
-        int c = 8;
+        Scanner scanner = new Scanner(System.in);
+
+
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        if(scanner.hasNextInt()){
+             a = scanner.nextInt();
+        }
+        if(scanner.hasNextInt()){
+             b = scanner.nextInt();
+        }
+        if(scanner.hasNextInt()){
+             c = scanner.nextInt();
+        }
 
         int volume = a * b * c;
 

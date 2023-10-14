@@ -1,4 +1,4 @@
-package Javaaaa.kkk;
+package javaaaa.kkk;
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {

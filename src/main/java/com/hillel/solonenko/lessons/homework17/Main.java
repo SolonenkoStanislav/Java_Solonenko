@@ -9,8 +9,6 @@ public class Main extends Drinks {
 
 
         do {
-
-
             DrinksMachine drinksMachine = null;
             DrinksMachine[] drinksMachines = DrinksMachine.values();
             while (true) {
