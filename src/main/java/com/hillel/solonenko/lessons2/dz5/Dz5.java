@@ -2,22 +2,19 @@ package com.hillel.solonenko.lessons2.dz5;
 
 public class Dz5 {
         public static void main(String[] args) {
-            int liWarier = 13;
-            int liArcher = 24;
-            int liRider = 46;
-            int liWarriersAmount = 860;
+            int warierLi = 13;
+            int archerLi = 24;
+            int riderLi = 46;
 
-            int minWarier = 9;
-            int minArcher = 35;
-            int minRider = 12;
-            double minWarrierAmount = liWarriersAmount * 1.5;
+            int warierMin = 9;
+            int archerMin = 35;
+            int riderMin = 12;
 
-            int wholeAttackLi = (liArcher + liWarier + liRider) * liWarriersAmount;
-            double wholeAttackMin =  ((minArcher + minRider + minWarier) * minWarrierAmount);
-            System.out.println("Li = " + wholeAttackLi);
-            System.out.println("Min = " + (int)wholeAttackMin);
-            System.out.println();
-            System.out.println();
+            int liPeopleSum  = 860 * (warierLi + archerLi + riderLi);
+            double minPeopleSum = (860 * 1.5) * (warierMin + archerMin + riderMin);
+
+            System.out.println(liPeopleSum + " Li atack ");
+            System.out.println((int)minPeopleSum + " Min atack ");
 
         }
 }
